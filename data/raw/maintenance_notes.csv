@@ -1,0 +1,201 @@
+machine_id,date,maintenance_note
+M2,2025-02-24,Machine M2: overheating detected. replaced filter. Operator: John.
+M3,2025-03-09,Machine M3: oil leak detected. reset controller. Operator: Tom.
+M4,2025-02-06,Machine M4: error code 42 detected. tightened bolts. Operator: Tom.
+M3,2025-03-04,Machine M3: unusual vibration detected. replaced filter. Operator: Tom.
+M1,2025-03-30,Machine M1: error code 42 detected. replaced filter. Operator: John.
+M3,2025-01-19,Machine M3: error code 42 detected. replaced filter. Operator: Mary.
+M2,2025-01-20,Machine M2: noise detected. reset controller. Operator: Mary.
+M4,2025-02-24,Machine M4: noise detected. tightened bolts. Operator: Mary.
+M4,2025-03-15,Machine M4: noise detected. tightened bolts. Operator: Mary.
+M2,2025-03-06,Machine M2: unusual vibration detected. reset controller. Operator: John.
+M3,2025-03-30,Machine M3: oil leak detected. reset controller. Operator: Mary.
+M2,2025-03-10,Machine M2: error code 42 detected. cleaned sensor. Operator: Tom.
+M1,2025-01-23,Machine M1: error code 42 detected. tightened bolts. Operator: Tom.
+M1,2025-03-04,Machine M1: overheating detected. tightened bolts. Operator: Tom.
+M2,2025-01-09,Machine M2: oil leak detected. tightened bolts. Operator: Tom.
+M4,2025-01-10,Machine M4: noise detected. replaced filter. Operator: Mary.
+M2,2025-03-18,Machine M2: noise detected. tightened bolts. Operator: John.
+M4,2025-03-16,Machine M4: error code 42 detected. reset controller. Operator: Mary.
+M4,2025-01-03,Machine M4: overheating detected. tightened bolts. Operator: Tom.
+M4,2025-02-12,Machine M4: error code 42 detected. replaced filter. Operator: John.
+M4,2025-02-12,Machine M4: error code 42 detected. replaced filter. Operator: John.
+M4,2025-01-13,Machine M4: overheating detected. reset controller. Operator: Mary.
+M3,2025-02-04,Machine M3: error code 42 detected. tightened bolts. Operator: Tom.
+M4,2025-03-12,Machine M4: error code 42 detected. tightened bolts. Operator: Tom.
+M4,2025-01-11,Machine M4: overheating detected. cleaned sensor. Operator: Mary.
+M1,2025-01-17,Machine M1: unusual vibration detected. cleaned sensor. Operator: Tom.
+M3,2025-01-11,Machine M3: oil leak detected. reset controller. Operator: John.
+M3,2025-03-18,Machine M3: unusual vibration detected. tightened bolts. Operator: Mary.
+M3,2025-02-18,Machine M3: noise detected. tightened bolts. Operator: Mary.
+M4,2025-01-14,Machine M4: noise detected. reset controller. Operator: John.
+M4,2025-02-25,Machine M4: overheating detected. tightened bolts. Operator: John.
+M1,2025-03-08,Machine M1: noise detected. replaced filter. Operator: Mary.
+M1,2025-01-28,Machine M1: unusual vibration detected. reset controller. Operator: Tom.
+M4,2025-02-13,Machine M4: noise detected. tightened bolts. Operator: John.
+M1,2025-03-17,Machine M1: error code 42 detected. tightened bolts. Operator: Tom.
+M1,2025-01-26,Machine M1: unusual vibration detected. tightened bolts. Operator: Tom.
+M4,2025-02-15,Machine M4: oil leak detected. tightened bolts. Operator: John.
+M3,2025-01-26,Machine M3: oil leak detected. tightened bolts. Operator: Mary.
+M2,2025-03-20,Machine M2: overheating detected. cleaned sensor. Operator: Mary.
+M2,2025-02-08,Machine M2: overheating detected. tightened bolts. Operator: Tom.
+M2,2025-02-14,Machine M2: error code 42 detected. reset controller. Operator: Tom.
+M4,2025-01-31,Machine M4: oil leak detected. tightened bolts. Operator: John.
+M4,2025-03-02,Machine M4: oil leak detected. cleaned sensor. Operator: Tom.
+M1,2025-02-12,Machine M1: overheating detected. reset controller. Operator: Mary.
+M2,2025-02-16,Machine M2: overheating detected. replaced filter. Operator: John.
+M2,2025-03-16,Machine M2: oil leak detected. tightened bolts. Operator: Mary.
+M2,2025-01-16,Machine M2: oil leak detected. tightened bolts. Operator: Tom.
+M1,2025-01-15,Machine M1: unusual vibration detected. tightened bolts. Operator: John.
+M4,2025-01-16,Machine M4: noise detected. replaced filter. Operator: Mary.
+M1,2025-03-29,Machine M1: noise detected. reset controller. Operator: John.
+M2,2025-01-11,Machine M2: noise detected. replaced filter. Operator: John.
+M1,2025-01-29,Machine M1: overheating detected. reset controller. Operator: John.
+M4,2025-02-02,Machine M4: error code 42 detected. reset controller. Operator: John.
+M3,2025-03-01,Machine M3: error code 42 detected. reset controller. Operator: John.
+M1,2025-01-19,Machine M1: oil leak detected. tightened bolts. Operator: Tom.
+M2,2025-02-27,Machine M2: noise detected. tightened bolts. Operator: John.
+M1,2025-03-10,Machine M1: oil leak detected. reset controller. Operator: Mary.
+M3,2025-01-03,Machine M3: unusual vibration detected. cleaned sensor. Operator: Mary.
+M1,2025-01-17,Machine M1: oil leak detected. cleaned sensor. Operator: Mary.
+M1,2025-03-24,Machine M1: oil leak detected. tightened bolts. Operator: Tom.
+M1,2025-01-21,Machine M1: oil leak detected. reset controller. Operator: John.
+M1,2025-01-17,Machine M1: unusual vibration detected. reset controller. Operator: John.
+M2,2025-02-14,Machine M2: overheating detected. tightened bolts. Operator: Tom.
+M2,2025-01-20,Machine M2: noise detected. reset controller. Operator: Tom.
+M2,2025-01-20,Machine M2: overheating detected. reset controller. Operator: Tom.
+M2,2025-03-03,Machine M2: oil leak detected. tightened bolts. Operator: Mary.
+M2,2025-01-12,Machine M2: noise detected. cleaned sensor. Operator: Tom.
+M1,2025-02-04,Machine M1: overheating detected. replaced filter. Operator: John.
+M3,2025-01-22,Machine M3: oil leak detected. replaced filter. Operator: Tom.
+M2,2025-03-31,Machine M2: oil leak detected. tightened bolts. Operator: Tom.
+M1,2025-02-20,Machine M1: noise detected. replaced filter. Operator: John.
+M4,2025-03-05,Machine M4: oil leak detected. cleaned sensor. Operator: Tom.
+M1,2025-02-11,Machine M1: unusual vibration detected. cleaned sensor. Operator: John.
+M4,2025-01-12,Machine M4: oil leak detected. cleaned sensor. Operator: John.
+M3,2025-02-12,Machine M3: overheating detected. replaced filter. Operator: Tom.
+M2,2025-02-13,Machine M2: unusual vibration detected. replaced filter. Operator: John.
+M4,2025-03-06,Machine M4: noise detected. reset controller. Operator: Tom.
+M3,2025-01-12,Machine M3: oil leak detected. cleaned sensor. Operator: John.
+M2,2025-01-23,Machine M2: error code 42 detected. tightened bolts. Operator: John.
+M3,2025-02-22,Machine M3: unusual vibration detected. cleaned sensor. Operator: John.
+M4,2025-03-24,Machine M4: unusual vibration detected. replaced filter. Operator: Mary.
+M2,2025-02-15,Machine M2: error code 42 detected. cleaned sensor. Operator: John.
+M2,2025-01-02,Machine M2: unusual vibration detected. reset controller. Operator: Tom.
+M2,2025-02-22,Machine M2: overheating detected. cleaned sensor. Operator: John.
+M1,2025-01-24,Machine M1: unusual vibration detected. tightened bolts. Operator: Tom.
+M4,2025-01-21,Machine M4: noise detected. replaced filter. Operator: Mary.
+M4,2025-02-23,Machine M4: unusual vibration detected. tightened bolts. Operator: Tom.
+M2,2025-01-04,Machine M2: unusual vibration detected. reset controller. Operator: John.
+M1,2025-01-09,Machine M1: oil leak detected. cleaned sensor. Operator: John.
+M4,2025-01-31,Machine M4: unusual vibration detected. cleaned sensor. Operator: Mary.
+M2,2025-03-19,Machine M2: oil leak detected. replaced filter. Operator: John.
+M4,2025-01-12,Machine M4: error code 42 detected. cleaned sensor. Operator: Tom.
+M3,2025-03-21,Machine M3: noise detected. cleaned sensor. Operator: John.
+M4,2025-02-17,Machine M4: noise detected. cleaned sensor. Operator: Mary.
+M4,2025-01-15,Machine M4: error code 42 detected. replaced filter. Operator: Tom.
+M2,2025-01-09,Machine M2: noise detected. tightened bolts. Operator: Tom.
+M3,2025-03-21,Machine M3: noise detected. replaced filter. Operator: Tom.
+M2,2025-03-14,Machine M2: oil leak detected. replaced filter. Operator: Tom.
+M1,2025-01-04,Machine M1: overheating detected. replaced filter. Operator: Tom.
+M2,2025-01-27,Machine M2: unusual vibration detected. reset controller. Operator: John.
+M2,2025-02-23,Machine M2: unusual vibration detected. replaced filter. Operator: John.
+M1,2025-02-12,Machine M1: unusual vibration detected. replaced filter. Operator: John.
+M1,2025-01-05,Machine M1: oil leak detected. tightened bolts. Operator: John.
+M2,2025-03-31,Machine M2: noise detected. cleaned sensor. Operator: John.
+M1,2025-01-16,Machine M1: noise detected. reset controller. Operator: John.
+M2,2025-03-31,Machine M2: noise detected. tightened bolts. Operator: Tom.
+M2,2025-02-19,Machine M2: overheating detected. cleaned sensor. Operator: Mary.
+M1,2025-02-06,Machine M1: overheating detected. cleaned sensor. Operator: Tom.
+M2,2025-03-12,Machine M2: oil leak detected. reset controller. Operator: Mary.
+M3,2025-03-03,Machine M3: error code 42 detected. reset controller. Operator: John.
+M2,2025-03-07,Machine M2: unusual vibration detected. replaced filter. Operator: Mary.
+M4,2025-01-31,Machine M4: unusual vibration detected. replaced filter. Operator: John.
+M2,2025-02-01,Machine M2: unusual vibration detected. reset controller. Operator: John.
+M2,2025-02-08,Machine M2: error code 42 detected. cleaned sensor. Operator: Mary.
+M1,2025-01-23,Machine M1: error code 42 detected. tightened bolts. Operator: John.
+M4,2025-01-12,Machine M4: unusual vibration detected. replaced filter. Operator: Mary.
+M1,2025-03-07,Machine M1: error code 42 detected. cleaned sensor. Operator: Mary.
+M4,2025-01-16,Machine M4: unusual vibration detected. reset controller. Operator: Mary.
+M4,2025-02-23,Machine M4: oil leak detected. reset controller. Operator: Tom.
+M1,2025-03-16,Machine M1: overheating detected. cleaned sensor. Operator: Mary.
+M1,2025-02-19,Machine M1: oil leak detected. tightened bolts. Operator: Mary.
+M4,2025-03-26,Machine M4: error code 42 detected. reset controller. Operator: John.
+M3,2025-01-24,Machine M3: unusual vibration detected. tightened bolts. Operator: Tom.
+M2,2025-03-17,Machine M2: overheating detected. reset controller. Operator: Tom.
+M2,2025-01-03,Machine M2: oil leak detected. tightened bolts. Operator: Mary.
+M3,2025-01-21,Machine M3: error code 42 detected. replaced filter. Operator: Tom.
+M2,2025-03-12,Machine M2: noise detected. replaced filter. Operator: John.
+M2,2025-03-19,Machine M2: noise detected. reset controller. Operator: Mary.
+M4,2025-01-30,Machine M4: noise detected. tightened bolts. Operator: Tom.
+M4,2025-01-02,Machine M4: oil leak detected. replaced filter. Operator: Tom.
+M4,2025-01-12,Machine M4: overheating detected. cleaned sensor. Operator: Mary.
+M3,2025-01-25,Machine M3: error code 42 detected. reset controller. Operator: Tom.
+M2,2025-03-21,Machine M2: noise detected. replaced filter. Operator: Mary.
+M2,2025-01-30,Machine M2: unusual vibration detected. reset controller. Operator: Mary.
+M1,2025-01-01,Machine M1: overheating detected. replaced filter. Operator: John.
+M1,2025-03-08,Machine M1: overheating detected. tightened bolts. Operator: Tom.
+M3,2025-02-16,Machine M3: error code 42 detected. replaced filter. Operator: John.
+M2,2025-03-30,Machine M2: unusual vibration detected. replaced filter. Operator: Tom.
+M4,2025-02-04,Machine M4: unusual vibration detected. reset controller. Operator: Mary.
+M4,2025-03-07,Machine M4: oil leak detected. tightened bolts. Operator: Tom.
+M4,2025-01-02,Machine M4: noise detected. cleaned sensor. Operator: John.
+M2,2025-03-08,Machine M2: overheating detected. tightened bolts. Operator: Mary.
+M1,2025-03-29,Machine M1: unusual vibration detected. cleaned sensor. Operator: Tom.
+M1,2025-02-10,Machine M1: error code 42 detected. replaced filter. Operator: Mary.
+M3,2025-03-03,Machine M3: overheating detected. replaced filter. Operator: Tom.
+M1,2025-01-24,Machine M1: oil leak detected. cleaned sensor. Operator: Tom.
+M1,2025-01-09,Machine M1: unusual vibration detected. reset controller. Operator: Mary.
+M3,2025-02-03,Machine M3: noise detected. tightened bolts. Operator: Mary.
+M4,2025-02-20,Machine M4: unusual vibration detected. reset controller. Operator: Mary.
+M1,2025-02-18,Machine M1: unusual vibration detected. replaced filter. Operator: Mary.
+M3,2025-01-12,Machine M3: overheating detected. tightened bolts. Operator: Mary.
+M1,2025-03-24,Machine M1: error code 42 detected. reset controller. Operator: John.
+M4,2025-03-16,Machine M4: oil leak detected. reset controller. Operator: Mary.
+M1,2025-01-16,Machine M1: overheating detected. cleaned sensor. Operator: Mary.
+M4,2025-01-06,Machine M4: oil leak detected. tightened bolts. Operator: Mary.
+M3,2025-03-28,Machine M3: error code 42 detected. tightened bolts. Operator: John.
+M3,2025-01-01,Machine M3: unusual vibration detected. cleaned sensor. Operator: John.
+M1,2025-03-03,Machine M1: noise detected. tightened bolts. Operator: John.
+M3,2025-03-01,Machine M3: unusual vibration detected. tightened bolts. Operator: John.
+M2,2025-01-07,Machine M2: oil leak detected. reset controller. Operator: John.
+M1,2025-01-13,Machine M1: noise detected. replaced filter. Operator: Mary.
+M2,2025-02-13,Machine M2: error code 42 detected. reset controller. Operator: Mary.
+M2,2025-02-19,Machine M2: error code 42 detected. tightened bolts. Operator: Tom.
+M3,2025-03-22,Machine M3: error code 42 detected. reset controller. Operator: John.
+M3,2025-01-09,Machine M3: noise detected. tightened bolts. Operator: Mary.
+M4,2025-02-16,Machine M4: error code 42 detected. cleaned sensor. Operator: Tom.
+M3,2025-01-21,Machine M3: noise detected. replaced filter. Operator: John.
+M4,2025-02-19,Machine M4: noise detected. replaced filter. Operator: Mary.
+M4,2025-03-27,Machine M4: unusual vibration detected. tightened bolts. Operator: Mary.
+M4,2025-03-17,Machine M4: overheating detected. reset controller. Operator: Tom.
+M4,2025-03-21,Machine M4: oil leak detected. replaced filter. Operator: Tom.
+M1,2025-01-11,Machine M1: overheating detected. tightened bolts. Operator: Tom.
+M1,2025-01-04,Machine M1: error code 42 detected. tightened bolts. Operator: Mary.
+M1,2025-01-31,Machine M1: noise detected. reset controller. Operator: Tom.
+M4,2025-03-02,Machine M4: overheating detected. cleaned sensor. Operator: Mary.
+M4,2025-03-16,Machine M4: error code 42 detected. reset controller. Operator: Mary.
+M3,2025-02-03,Machine M3: oil leak detected. reset controller. Operator: Mary.
+M1,2025-03-04,Machine M1: unusual vibration detected. tightened bolts. Operator: Mary.
+M2,2025-02-14,Machine M2: unusual vibration detected. replaced filter. Operator: Mary.
+M1,2025-03-30,Machine M1: overheating detected. reset controller. Operator: Tom.
+M3,2025-03-14,Machine M3: oil leak detected. cleaned sensor. Operator: Mary.
+M3,2025-01-09,Machine M3: overheating detected. replaced filter. Operator: Tom.
+M2,2025-01-11,Machine M2: oil leak detected. cleaned sensor. Operator: Mary.
+M1,2025-01-25,Machine M1: unusual vibration detected. cleaned sensor. Operator: Mary.
+M1,2025-02-02,Machine M1: unusual vibration detected. replaced filter. Operator: Mary.
+M4,2025-01-03,Machine M4: oil leak detected. cleaned sensor. Operator: Tom.
+M4,2025-03-31,Machine M4: overheating detected. replaced filter. Operator: Tom.
+M3,2025-03-29,Machine M3: overheating detected. cleaned sensor. Operator: John.
+M1,2025-02-04,Machine M1: noise detected. cleaned sensor. Operator: John.
+M3,2025-01-18,Machine M3: overheating detected. replaced filter. Operator: Mary.
+M3,2025-03-20,Machine M3: unusual vibration detected. replaced filter. Operator: John.
+M1,2025-02-16,Machine M1: error code 42 detected. reset controller. Operator: Mary.
+M4,2025-01-13,Machine M4: noise detected. reset controller. Operator: Mary.
+M3,2025-03-24,Machine M3: overheating detected. cleaned sensor. Operator: John.
+M3,2025-02-28,Machine M3: unusual vibration detected. cleaned sensor. Operator: Tom.
+M2,2025-03-03,Machine M2: unusual vibration detected. reset controller. Operator: John.
+M3,2025-02-06,Machine M3: unusual vibration detected. tightened bolts. Operator: Mary.
+M2,2025-02-13,Machine M2: oil leak detected. reset controller. Operator: Tom.
+M3,2025-03-20,Machine M3: overheating detected. cleaned sensor. Operator: John.
+M1,2025-01-29,Machine M1: noise detected. replaced filter. Operator: John.
