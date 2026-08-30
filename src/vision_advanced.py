@@ -5,69 +5,63 @@ from torchvision import transforms, models
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from torch.utils.data import DataLoader, TensorDataset
-
-from pytorch_grad_cam import GradCAM
-from pytorch_grad_cam.utils.image import show_cam_on_image
+import cv2
 import os
 import pandas as pd
-import cv2
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
+# ---- Load ResNet model ----
 def load_resnet_model(model_path='models/resnet_defect.pth'):
     model = models.resnet18(weights=None)
     model.fc = nn.Linear(512, 1)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.load_state_dict(torch.load(model_path, map_location=device))
     model = model.to(device)
     model.eval()
     return model
 
+# ---- Grad-CAM (simplified; requires pytorch-grad-cam if used) ----
 def generate_gradcam(image_path, model, target_layer=None):
-    """Generate Grad-CAM heatmap for a single image."""
-    if target_layer is None:
-        target_layer = model.layer4[-1]  # last conv layer
+    try:
+        from pytorch_grad_cam import GradCAM
+        from pytorch_grad_cam.utils.image import show_cam_on_image
+        device = next(model.parameters()).device
+        if target_layer is None:
+            target_layer = model.layer4[-1]
+        transform = transforms.Compose([
+            transforms.Grayscale(num_output_channels=3),
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.5,0.5,0.5], [0.5,0.5,0.5])
+        ])
+        img_pil = Image.open(image_path).convert('L')
+        img_tensor = transform(img_pil).unsqueeze(0).to(device)
+        cam = GradCAM(model=model, target_layers=[target_layer])
+        grayscale_cam = cam(input_tensor=img_tensor, targets=None)
+        grayscale_cam = grayscale_cam[0, :]
+        img_resized = img_pil.resize((224, 224))
+        img_np = np.array(img_resized).astype(np.float32) / 255.0
+        img_np = np.stack([img_np]*3, axis=-1)
+        visualization = show_cam_on_image(img_np, grayscale_cam, use_rgb=True)
+        return visualization
+    except ImportError:
+        print("pytorch-grad-cam not installed; returning None")
+        return None
 
-    # Preprocess image
-    transform = transforms.Compose([
-        transforms.Grayscale(num_output_channels=3),
-        transforms.Resize((224, 224)),
-        transforms.ToTensor(),
-        transforms.Normalize([0.5,0.5,0.5], [0.5,0.5,0.5])
-    ])
-    img_pil = Image.open(image_path).convert('L')
-    img_tensor = transform(img_pil).unsqueeze(0).to(device)
+# ---- Severity estimation (count defective pixels) ----
+def estimate_severity(image_path, threshold=200):
+    """Returns ratio of pixels above threshold (defect area)."""
+    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    if img is None:
+        return 0.0
+    _, binary = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY)
+    defect_pixels = np.sum(binary == 255)
+    total_pixels = img.shape[0] * img.shape[1]
+    return defect_pixels / total_pixels
 
-    # Run Grad-CAM
-    cam = GradCAM(model=model, target_layers=[target_layer])
-    grayscale_cam = cam(input_tensor=img_tensor, targets=None)  # None = use highest predicted class
-    grayscale_cam = grayscale_cam[0, :]
-
-    # Overlay on original image (resized to 224x224)
-    img_resized = img_pil.resize((224, 224))
-    img_np = np.array(img_resized).astype(np.float32) / 255.0
-    img_np = np.stack([img_np]*3, axis=-1)  # make 3-channel for visualization
-    visualization = show_cam_on_image(img_np, grayscale_cam, use_rgb=True)
-    return visualization
-
-# Example usage (when run standalone)
-if __name__ == "__main__":
-    model = load_resnet_model()
-    # Pick a test image (say the first defect image)
-    meta = pd.read_csv('data/raw/image_metadata.csv')
-    defect_img = meta[meta['defect_flag']==1].iloc[0]['image_path']
-    img_path = f"data/images/{defect_img}"
-    heatmap = generate_gradcam(img_path, model)
-    plt.imshow(heatmap)
-    plt.title(f"Grad-CAM for {defect_img}")
-    plt.show()
-
-
-# Autoencoder for anomaly detection
+# ---- Autoencoder (optional, kept from earlier) ----
 class Autoencoder(nn.Module):
     def __init__(self):
         super().__init__()
-        # Encoder
         self.encoder = nn.Sequential(
             nn.Conv2d(1, 32, kernel_size=3, stride=2, padding=1),
             nn.ReLU(),
@@ -76,7 +70,6 @@ class Autoencoder(nn.Module):
             nn.Conv2d(64, 128, kernel_size=3, stride=2, padding=1),
             nn.ReLU(),
         )
-        # Decoder
         self.decoder = nn.Sequential(
             nn.ConvTranspose2d(128, 64, kernel_size=3, stride=2, padding=1, output_padding=1),
             nn.ReLU(),
@@ -91,8 +84,9 @@ class Autoencoder(nn.Module):
         decoded = self.decoder(encoded)
         return decoded
 
+# ---- Training autoencoder (not used in agent, but kept) ----
 def train_autoencoder(normal_images, epochs=20, batch_size=32):
-    """normal_images: list of image paths (only class 0)"""
+    from torch.utils.data import DataLoader, TensorDataset
     transform = transforms.Compose([
         transforms.Grayscale(num_output_channels=1),
         transforms.Resize((64, 64)),
@@ -104,11 +98,9 @@ def train_autoencoder(normal_images, epochs=20, batch_size=32):
         dataset.append(transform(img))
     dataset = torch.stack(dataset)
     loader = DataLoader(TensorDataset(dataset), batch_size=batch_size, shuffle=True)
-
     model = Autoencoder()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     criterion = nn.MSELoss()
-
     for epoch in range(epochs):
         total_loss = 0
         for (batch,) in loader:
