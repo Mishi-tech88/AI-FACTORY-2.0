@@ -1,5 +1,4 @@
 # src/digital_twin.py
-# (same as previous answer – included here for completeness)
 import numpy as np
 import pandas as pd
 from dataclasses import dataclass
@@ -57,7 +56,10 @@ class FactorySimulator:
         return {'production': total_prod, 'downtime': downtime, 'risk': risk, 'cost': total_cost}
 
     def simulate(self, action, hours=24, load_factor=1.0):
-        total_prod = 0; total_downtime = 0; max_risk = 0; total_cost = 0
+        total_prod = 0
+        total_downtime = 0
+        max_risk = 0
+        total_cost = 0
         for _ in range(hours):
             res = self.step(action, load_factor)
             total_prod += res['production']
@@ -65,16 +67,22 @@ class FactorySimulator:
             max_risk = max(max_risk, res['risk'])
             total_cost += res['cost']
         avg_cost = total_cost / hours
-        explanation = f"Action '{action}': Production {total_prod:.1f} units, Downtime {total_downtime:.1f}h, Risk {max_risk:.2f}, Cost {avg_cost:.1f}/h"
+        explanation = (f"Action '{action}': Production {total_prod:.1f} units, "
+                       f"Downtime {total_downtime:.1f}h, Risk {max_risk:.2f}, Cost {avg_cost:.1f}/h")
         return SimulationResult(action, total_prod, total_downtime, max_risk, avg_cost, explanation)
 
 def compare_scenarios(current_state=None, hours=24):
-    sim = FactorySimulator(
-        initial_health=current_state.get('health') if current_state else None,
-        initial_wear=current_state.get('wear') if current_state else None
-    )
+    """
+    Compare three scenarios: continue, stop, reduce_load.
+    Each scenario starts with a fresh simulator (same initial state).
+    """
     results = []
     for action in ['continue', 'stop', 'reduce_load']:
+        # Create a new simulator for each scenario to avoid state contamination
+        sim = FactorySimulator(
+            initial_health=current_state.get('health') if current_state else None,
+            initial_wear=current_state.get('wear') if current_state else None
+        )
         res = sim.simulate(action, hours)
         results.append({
             'Scenario': action,
