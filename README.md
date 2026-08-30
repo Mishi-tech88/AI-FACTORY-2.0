@@ -239,12 +239,6 @@ This project is open‑source and available under the MIT License. See the [LICE
 
 ---
 
-## 👨‍💻 Contributors
-
-- **MISBAH** – Lead Developer  
-
-
----
 
 ## 📧 Contact
 
